@@ -1,0 +1,5 @@
+streamlit>=1.38.0
+langchain>=1.0.0
+langchain-google-genai>=2.0.0
+langchain-tavily>=0.1.0
+python-dotenv>=1.0.1

@@ -1,0 +1,26 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploaded / generated data
+*.csv
+!sample_leads.csv
