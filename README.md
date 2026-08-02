@@ -140,18 +140,6 @@ Edit this string to match your own ICP — for example, target company size, ind
 - **No retry/error handling yet:** a failed API call on one row will currently stop the whole batch (see Roadmap below).
 - **Sequential processing:** leads are processed one at a time, not in parallel.
 
----
-
-## 🗺️ Roadmap
-
-- [ ] Add retry logic / graceful error handling per row so one failure doesn't halt the batch
-- [ ] Batch/parallel processing to speed up large lead lists
-- [ ] Configurable qualification criteria directly from the UI (no code editing required)
-- [ ] Support additional CSV columns (company name, website) to skip domain-guessing when available
-- [ ] Add a progress bar with estimated time remaining
-- [ ] Persist results to a database instead of only an in-session download
-
----
 
 ## 🧰 Tech Stack
 
@@ -167,10 +155,9 @@ Edit this string to match your own ICP — for example, target company size, ind
 
 ## 📄 License
 
-This project is provided as-is for personal and commercial use. Add your preferred license (MIT, Apache 2.0, etc.) here.
-
+MIT
 ---
 
 ## 🙋 Author
 
-Built by Sohail — part of an ongoing series of AI agent projects for real business use cases.
+Built by Sohail Ahmad
