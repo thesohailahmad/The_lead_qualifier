@@ -7,10 +7,10 @@ from langchain.agents import create_agent
 from langchain.messages import HumanMessage
 from dotenv import load_dotenv
 
-# Load your API keys securely
+
 load_dotenv()
 
-# --- UI SETUP ---
+
 st.title("🚀 The Lead Qualifier Agent")
 st.write("Upload a CSV file containing an 'email' column. The AI will research each company and qualify them based on your strict criteria.")
 
@@ -47,7 +47,7 @@ if st.button("Qualify Leads"):
             # Skip the header row
             next(reader) 
             
-            # We will store the successful "YES" leads in this list
+            # it will store the successful "YES" leads in this list
             qualified_leads = []
             
             # Create an empty placeholder on the webpage to show live updates
@@ -64,7 +64,7 @@ if st.button("Qualify Leads"):
                 # Extract the company name safely
                 email_parts = email.split('@')
                 if len(email_parts) < 2:
-                    continue  # Skip if it's not a valid email format
+                    continue  
                     
                 domain = email_parts[1]
                 domain_parts = domain.split('.')
@@ -73,7 +73,7 @@ if st.button("Qualify Leads"):
                 # Update the webpage to show which company is currently being researched
                 progress_text.write(f"🔍 Evaluating: **{company_name}**...")
                 
-                # Ask the AI
+                
                 question = HumanMessage(content=f"Search for {company_name} and qualify them.")
                 response = agent.invoke({"messages": [question]})
                 
