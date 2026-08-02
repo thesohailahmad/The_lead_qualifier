@@ -26,7 +26,7 @@ if st.button("Qualify Leads"):
         with st.spinner("Initializing AI and processing leads. This might take a minute..."):
             
             # 1. SETUP THE AI
-            model = init_chat_model(model="gemini-2.5-flash", model_provider="google_genai", temperature=0.0)
+            model = init_chat_model(model="gemini-3.5-flash", model_provider="google_genai", temperature=0.0)
             search_tool = TavilySearch(max_results=1)
             
             agent = create_agent(
